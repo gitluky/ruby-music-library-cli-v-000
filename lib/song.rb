@@ -44,7 +44,7 @@ class Song
       artist = song_data[0]
       song = song_data[1]
       genre = song_data[2]
-      find_by_name(song) || Song.new()
+      find_by_name(song) || Song.new(song, artist, genre)
   end
 
   def self.create_from_filename(filename)
