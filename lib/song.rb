@@ -43,7 +43,7 @@ class Song
       song_data = filename.gsub(".mp3","").split(" - ")
       artist_name = song_data[0]
       song_name = song_data[1]
-      genre_genre = song_data[2]
+      genre_name = song_data[2]
       find_by_name(song_name) || Song.new(song_name, artist_name, genre_name)
   end
 
