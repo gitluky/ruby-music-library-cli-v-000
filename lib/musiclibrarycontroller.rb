@@ -16,6 +16,20 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
+    input = gets
+
+    case input
+    when "list songs"
+      Song.all
+    when "list artists"
+      Artist.all
+    when "list genres"
+      Genre.all
+    when "list artist"
+      puts "Which artist?"
+      name = gets
+      artist = Artist.find_by_name(name)
+      artist.songs {|song| puts song.name}
   end
 
 end
