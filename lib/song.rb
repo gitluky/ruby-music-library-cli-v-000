@@ -40,7 +40,7 @@ class Song
   end
 
   def new_from_filename(filename)
-      song_data = filename.gsub('.mp3','').split(' - ')
+      song_data = filename.gsub(".mp3","").split(" - ")
       artist = song_data[0]
       song = song_data[1]
       genre = song_data[2]
