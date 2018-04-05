@@ -6,7 +6,9 @@ class MusicLibraryController
   end
 
   def call
-    
+    input = nil
+    while input != 'exit'
+
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of your songs, enter 'list songs'."
@@ -36,12 +38,9 @@ class MusicLibraryController
       Genre.find_by_name(genre).songs {|song| puts song.name}
     when "play song"
       puts "song playing"
-    when "exit"
-      puts "exitting"
     else
       puts "Please choose from the list above"
     end
-
 
   end
 
