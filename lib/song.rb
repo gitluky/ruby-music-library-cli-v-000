@@ -45,7 +45,7 @@ class Song
       find_or_create_by_name(song)
   end
 
-  def create_from_filename(filename)
+  def self.create_from_filename(filename)
     new_from_filename(filename).tap {|file| file.save}
   end
 
