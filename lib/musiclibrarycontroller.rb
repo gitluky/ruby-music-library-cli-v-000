@@ -45,3 +45,6 @@ class MusicLibraryController
   end
 
 end
+
+music_library_controller = MusicLibraryController.new
+music_library_controller.call
