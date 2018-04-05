@@ -33,6 +33,15 @@ class MusicLibraryController
       puts "Which genre?"
       genre = gets
       Genre.find_by_name(genre).songs {|song| puts song.name}
+    when "play song"
+      puts "song playing"
+    when "exit"
+      puts "exitting"
+    else
+      puts "Please choose from the list above"
+    end
+
+      
   end
 
 end
