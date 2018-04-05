@@ -28,7 +28,11 @@ class MusicLibraryController
     when "list artist"
       puts "Which artist?"
       name = gets
-      artist = Artist.find_by_name(name)
+      Artist.find_by_name(name).songs {|song| puts song.name}
+    when "list genre"
+      puts "Which genre?"
+      name = gets
+       Genre.find_by_name(name)
       artist.songs {|song| puts song.name}
   end
 
