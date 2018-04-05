@@ -24,5 +24,3 @@ class MusicImporter
 
 end
 
-new_import = MusicImporter.new('./db/mp3s')
-binding.pry
