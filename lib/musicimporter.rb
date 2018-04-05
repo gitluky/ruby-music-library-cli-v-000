@@ -13,13 +13,7 @@ class MusicImporter
   end
 
   def import
-    files.each do |filename|
-      song_data = filename.gsub(".mp3","").split(" - ")
-      artist = song_data[0]
-      song = song_data[1]
-      genre = song_data[2]
-      Song.new(song, artist, genre)
-    end
+    files.each {|file| Song.create_from_filename(file)}
   end
 
 end
